@@ -33,7 +33,7 @@
       </OverrideVtorValue>
       <Channel>
         <host>127.0.0.1</host>
-        <port>55179</port>
+        <port>55153</port>
         <ssl>False</ssl>
       </Channel>
       <ToolOptions>
@@ -55,96 +55,107 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <AvrGcc>
-  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.symbols.DefSymbols><ListValues>
-  <Value>ARCH=AVR8</Value>
-  <Value>F_CPU=16000000</Value>
-  <Value>F_USB=F_CPU</Value>
-  <Value>BOARD=USER</Value>
-  <Value>FLASH_SIZE_BYTES=32768</Value>
-  <Value>BOOTLOADER_SEC_SIZE_BYTES=32768</Value>
-</ListValues></avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcc.linker.libraries.Libraries><ListValues>
-  <Value>m</Value>
-</ListValues></avrgcc.linker.libraries.Libraries>
-  <avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
-  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
-</AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>ARCH=AVR8</Value>
+            <Value>F_CPU=16000000</Value>
+            <Value>F_USB=F_CPU</Value>
+            <Value>BOARD=USER</Value>
+            <Value>FLASH_SIZE_BYTES=32768</Value>
+            <Value>BOOTLOADER_SEC_SIZE_BYTES=32768</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+      </AvrGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGcc>
-  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.symbols.DefSymbols>
-    <ListValues>
-      <Value>ARCH=AVR8</Value>
-      <Value>F_CPU=16000000</Value>
-      <Value>F_USB=F_CPU</Value>
-      <Value>BOARD=USER</Value>
-      <Value>FLASH_SIZE_BYTES=32768</Value>
-      <Value>BOOTLOADER_SEC_SIZE_BYTES=32768</Value>
-      <Value>USB_DEVICE_ONLY</Value>
-      <Value>NO_STREAM_CALLBACKS</Value>
-      <Value>INTERRUPT_CONTROL_ENDPOINT</Value>
-      <Value>USE_FLASH_DESCRIPTORS</Value>
-      <Value>USE_STATIC_OPTIONS="(USB_DEVICE_OPT_FULLSPEED | USB_OPT_AUTO_PLL)"</Value>
-      <Value>FIXED_CONTROL_ENDPOINT_SIZE=8</Value>
-      <Value>FIXED_NUM_CONFIGURATIONS=1</Value>
-    </ListValues>
-  </avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-  <avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcc.compiler.warnings.WarningsAsErrors>True</avrgcc.compiler.warnings.WarningsAsErrors>
-  <avrgcc.linker.libraries.Libraries>
-    <ListValues>
-      <Value>m</Value>
-    </ListValues>
-  </avrgcc.linker.libraries.Libraries>
-  <avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
-  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
-</AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>ARCH=AVR8</Value>
+            <Value>F_CPU=16000000</Value>
+            <Value>F_USB=F_CPU</Value>
+            <Value>FLASH_SIZE_BYTES=32768</Value>
+            <Value>BOOTLOADER_SEC_SIZE_BYTES=32768</Value>
+            <Value>USB_DEVICE_ONLY</Value>
+            <Value>NO_STREAM_CALLBACKS</Value>
+            <Value>INTERRUPT_CONTROL_ENDPOINT</Value>
+            <Value>USE_FLASH_DESCRIPTORS</Value>
+            <Value>USE_STATIC_OPTIONS="(USB_DEVICE_OPT_FULLSPEED | USB_OPT_AUTO_PLL)"</Value>
+            <Value>FIXED_CONTROL_ENDPOINT_SIZE=32</Value>
+            <Value>FIXED_NUM_CONFIGURATIONS=1</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>..</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.warnings.WarningsAsErrors>True</avrgcc.compiler.warnings.WarningsAsErrors>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="avrslcd.c">
+    <Compile Include="FatalError.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="bootjump.c">
+    <Compile Include="LCD\avrslcd.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Descriptors.c">
+    <Compile Include="LCD\avrslcd.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Descriptors.h">
+    <Compile Include="USB\Descriptors.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Endpoints.h">
+    <Compile Include="USB\Descriptors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USB\Endpoints.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USB\USBEvents.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="global.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HeraclesAVR.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="avrslcd.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="jtag.h">
@@ -900,6 +911,18 @@
     <Compile Include="LUFA\Version.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="TestStub.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USBCommand.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USB\USBImpl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USB\USBImpl.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LUFA" />
@@ -966,6 +989,8 @@
     <Folder Include="LUFA\Platform" />
     <Folder Include="LUFA\Platform\UC3" />
     <Folder Include="LUFA\Platform\XMEGA" />
+    <Folder Include="LCD" />
+    <Folder Include="USB" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LUFA\License.txt">

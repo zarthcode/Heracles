@@ -1,0 +1,8 @@
+
+
+Find & Copy libusb executables to needed locations as build step.
+Configure VendorID and DeviceID
+
+Shared command code.
+
+Unique ID

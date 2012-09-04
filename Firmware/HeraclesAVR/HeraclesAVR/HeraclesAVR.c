@@ -9,10 +9,18 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include "avrslcd.h"
+
+#include "LUFA/Common/Common.h"
+#include "LUFA/Drivers/USB/USB.h"
+
+#include "USB/USBImpl.h"
+
+
+#include "LCD/avrslcd.h"
 
 int main(void)
 {
+	
 	// Configure LCD Pins
 	bit_set(DDRD, BIT(AVRSLCD_DATA));
 	bit_set(DDRD, BIT(AVRSLCD_CLK));
@@ -24,20 +32,22 @@ int main(void)
 	
 	avrslcd_MoveCursor(1,4);
 	printf("HERACLES");
-	avrslcd_MoveCursor(2,1);
-	printf("MOTION CONTROL");
+	_delay_ms(2000);
 	
-	avrslcd_MoveCursor(1, 20);
-	printf("Firmware");
-	avrslcd_MoveCursor(2, 22);
-	printf("0.1a");
 	
-	_delay_ms(10000);
+	// Initialize USB
+	USB_Init();
+
+	// Enable global interrupts
+	sei();
+	
+	// Main loop
 	while(1)
 	{
-
-		avrslcd_CursorDisplayShift(1,0);
-		_delay_ms(250);
+	
+		ServiceUSB();
+	
 	}
 	
 }
+

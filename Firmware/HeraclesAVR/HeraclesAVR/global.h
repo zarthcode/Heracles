@@ -16,3 +16,4 @@
 #define BIT(x)	(0x01 << (x))
 #define LONGBIT(x) ((unsigned long)0x00000001 << (x))
 
+void FatalError(char* str);
