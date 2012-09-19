@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Atmel Studio Solution File, Format Version 11.00
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "InterfaceProcessor", "HeraclesAVR\InterfaceProcessor.cproj", "{7F30E6DE-F23D-40AD-920F-7CC16B2CB215}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "TrajectoryProcessor", "TrajectoryProcessor\TrajectoryProcessor.cproj", "{18FD22E6-3E5C-4CCB-9742-D3C244404F96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -13,6 +15,10 @@ Global
 		{7F30E6DE-F23D-40AD-920F-7CC16B2CB215}.Debug|AVR.Build.0 = Debug|AVR
 		{7F30E6DE-F23D-40AD-920F-7CC16B2CB215}.Release|AVR.ActiveCfg = Release|AVR
 		{7F30E6DE-F23D-40AD-920F-7CC16B2CB215}.Release|AVR.Build.0 = Release|AVR
+		{18FD22E6-3E5C-4CCB-9742-D3C244404F96}.Debug|AVR.ActiveCfg = Debug|AVR
+		{18FD22E6-3E5C-4CCB-9742-D3C244404F96}.Debug|AVR.Build.0 = Debug|AVR
+		{18FD22E6-3E5C-4CCB-9742-D3C244404F96}.Release|AVR.ActiveCfg = Release|AVR
+		{18FD22E6-3E5C-4CCB-9742-D3C244404F96}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

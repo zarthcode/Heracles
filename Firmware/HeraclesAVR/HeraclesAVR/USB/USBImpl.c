@@ -31,32 +31,57 @@ void ServiceUSB(void)
 	if (USB_DeviceState != DEVICE_STATE_Configured)
 		return;
 	
+	// Save endpoint
 	uint8_t PrevEndpoint = Endpoint_GetCurrentEndpoint();
 	
 	// Check for interrupts
-		
 	Endpoint_SelectEndpoint(INTERRUPT_OUT_EPNUM);
 		
 	if(Endpoint_IsOUTReceived())
 	{
-			
-		unsigned char interruptData[16];
-		memset(interruptData, '\0', 16);
-			
-		// Process incoming interrupt packet.
-		Endpoint_Read_Stream_LE(interruptData, 16, NULL);
-			
-		// Acknowledge the packet
-		if (!Endpoint_IsReadWriteAllowed())
+		
+		
+		if (ESTOP_isActive())
 		{
-			// ACK
-			Endpoint_ClearOUT();
+		
+		
+			// JTAG Mode
+			if (JTAG_isEnabled())
+			{
+			
+				// Receive JTAG Command
+				
+				
+				// Dispatch command
+				
+			
+			}
+		
+		
+		
 		}
+		else
+		{
 			
-		avrslcd_MoveCursor(2,1);
-		printf("%s", interruptData);
 			
-		returnFire = true;
+			unsigned char interruptData[16];
+			memset(interruptData, '\0', 16);
+			
+			// Process incoming interrupt packet.
+			Endpoint_Read_Stream_LE(interruptData, 16, NULL);
+			
+			// Acknowledge the packet
+			if (!Endpoint_IsReadWriteAllowed())
+			{
+				// ACK
+				Endpoint_ClearOUT();
+			}
+			
+			avrslcd_MoveCursor(2,1);
+			printf("%s", interruptData);
+			
+			returnFire = true;
+		}		
 	}
 
 	
@@ -162,47 +187,9 @@ void ServiceUSB(void)
 		avrslcd_MoveCursor(2,1);
 		printf("%s", BulkBuffer);
 		
-	}
-	
-	
-	// Check for isochronous data
-	Endpoint_SelectEndpoint(ISOCHRONOUS_OUT_EPNUM);
-	if(Endpoint_IsOUTReceived())
-	{
-		// Process incoming isochronous data packet.
-		
-		memset(IsoBuffer, '\0', sizeof(IsoBuffer));
+	}	
 			
-			
-		Endpoint_Read_Stream_LE(IsoBuffer, sizeof(IsoBuffer), &IsoBufferData);
-			
-		// Acknowledge the packet
-		if (!Endpoint_IsReadWriteAllowed())
-		{
-			// ACK
-			Endpoint_ClearOUT();
-		}
-			
-		avrslcd_Clear();
-		printf("Iso packet rec:\n%s", IsoBuffer);
-		avrslcd_MoveCursor(2,1);
-			
-			
-	}
-	
-	Endpoint_SelectEndpoint(ISOCHRONOUS_IN_EPNUM);
-	if (Endpoint_IsINReady())
-	{
-		// Send back data
-		uint16_t bytesProcessed = 0;
-		Endpoint_Write_Stream_LE(IsoBuffer, IsoBufferData, &bytesProcessed);
-		
-		// Send last
-		Endpoint_ClearIN();
-	}
-		
-			
-
+	// Restore endpoint
 	Endpoint_SelectEndpoint(PrevEndpoint);
 }
 
@@ -212,31 +199,64 @@ void ProcessVendorControlRequest()
 	// Process incoming vendor control request
 	switch(USB_ControlRequest.bRequest)
 	{
-		case COMMAND_None:
+		
+		case COMMAND_Version:
 		{
-			Endpoint_ClearSETUP();	// ACK SETUP Packet.
-	//		uint8_t Buffer[8];
-	//		Endpoint_Read_Control_Stream_LE(Buffer, 8);
-			Endpoint_ClearStatusStage();
-	//		Endpoint_ClearIN();
 			
-			// Act on the command.
-			avrslcd_MoveCursor(2,1);
-			printf("1");
+			Endpoint_ClearSETUP();	// ACK SETUP Packet.
+			
+			// Prepare Version Packet
+			VersionCommand_t Buffer;
+			GetVersionInformation(&Buffer);
+			
+			// Send version data to host
+			Endpoint_Write_Control_Stream_LE(Buffer, sizeof(VersionCommand_t));
+			Endpoint_ClearOUT();
+			
+			
+		}
+		break;
+		
+		
+		case COMMAND_ESTOP:
+		{
+			// Act on the command without delay.
+			ESTOP_Set();
+			
+			// Acknowledge the operation.
+			Endpoint_ClearSETUP();	// ACK SETUP Packet.
+			Endpoint_ClearStatusStage();	
+			
 		}			
 		break;
 					
 		case COMMAND_JTAG:
 		{
+			
 			Endpoint_ClearSETUP();	// ACK SETUP Packet.
-			uint8_t Buffer[8];
-			Endpoint_Read_Control_Stream_LE(Buffer, 8);
-			Endpoint_ClearIN();
-			avrslcd_MoveCursor(2,1);
-			printf("2");
+			
+			// Enter JTAG mode
+			ESTOP_Set();
+			JTAGChain_t* pDeviceChain = JTAG_Mode();
+			
+			if (pDeviceChain == NULL)
+			{
+				// Error STALL/NAK?
+			} 
+			else
+			{
+				
+				// Provide the device chain details to the host
+				Endpoint_Write_Control_Stream_LE(pDeviceChain, sizeof(JTAGChain_t) + (pDeviceChain->length * sizeof(JTAGDevice_t)));
+				Endpoint_ClearOUT();
+				
+			}
+			
+			
+			
 		}			
 		break;
-					
+	/*		
 		case COMMAND_Reset:
 		{	
 			Endpoint_ClearSETUP();	// ACK SETUP Packet.
@@ -268,7 +288,7 @@ void ProcessVendorControlRequest()
 			avrslcd_MoveCursor(2,1);
 			printf("\"START\"");
 		break;
-					
+	*/
 		default:
 			avrslcd_MoveCursor(2,1);
 			printf("Unknown Command");

@@ -74,13 +74,5 @@ void EVENT_USB_Device_ConfigurationChanged(void)
 	// Configure the interrupt IN endpoint
 	success &= Endpoint_ConfigureEndpoint(ENDPOINT_DIR_IN | INTERRUPT_IN_EPNUM, EP_TYPE_INTERRUPT, INTERRUPT_IN_EPSIZE, 1);
 	
-	// Configure the isochronous OUT endpoint
-	success &= Endpoint_ConfigureEndpoint(ISOCHRONOUS_OUT_EPNUM, EP_TYPE_ISOCHRONOUS, ISOCHRONOUS_OUT_EPSIZE, 1);
-	
-	// Configure the isochronous IN endpoint
-	success &= Endpoint_ConfigureEndpoint(ENDPOINT_DIR_IN | ISOCHRONOUS_IN_EPNUM, EP_TYPE_ISOCHRONOUS, ISOCHRONOUS_IN_EPSIZE, 1);
-	
-	avrslcd_MoveCursor(1,1);
-	printf("Configured");
 }
 

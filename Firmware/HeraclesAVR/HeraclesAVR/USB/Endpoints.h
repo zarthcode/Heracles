@@ -4,8 +4,6 @@
  * Created: 8/5/2012 8:59:35 PM
  *  Author: Anthony
  */ 
-
-
 #pragma once
 
 #include "LUFA/Drivers/USB/USB.h"
@@ -23,12 +21,6 @@
 #define INTERRUPT_IN_EPSIZE		8
 #define INTERRUPT_IN_EPNUM		0x02
 
-#define ISOCHRONOUS_OUT_EPSIZE	8
-#define ISOCHRONOUS_OUT_EPNUM	0x05
-
-#define ISOCHRONOUS_IN_EPSIZE		8
-#define ISOCHRONOUS_IN_EPNUM	0x06
-
 
 // Heracles Configuration Descriptor Structure
 
@@ -40,7 +32,5 @@ typedef struct
 	USB_Descriptor_Endpoint_t			InterruptInEndpoint;	// Priority messages from the device
 	USB_Descriptor_Endpoint_t			DataInEndpoint;			// Bulk data from the device
 	USB_Descriptor_Endpoint_t			DataOutEndpoint;		// Bulk data to the device
-	USB_Descriptor_Endpoint_t			IsochronousOutEndpoint;		// Isochronous data to the device
-	USB_Descriptor_Endpoint_t			IsochronousInEndpoint;		// Isochronous data from the device
-
 } USB_Descriptor_Configuration_t;
+

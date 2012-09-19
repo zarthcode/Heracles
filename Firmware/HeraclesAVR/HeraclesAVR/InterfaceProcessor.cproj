@@ -131,6 +131,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="EStop.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="EStop.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="FatalError.c">
       <SubType>compile</SubType>
     </Compile>
@@ -138,6 +144,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="LCD\avrslcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Pinout.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="USB\Descriptors.c">
@@ -921,6 +930,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="USB\USBImpl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Version.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Version.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

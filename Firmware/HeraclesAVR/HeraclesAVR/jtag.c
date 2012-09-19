@@ -11,9 +11,13 @@
 // Static global that contains the target device's TAP state.
 static JTAGState_t currentState = RunTestIdle;
 static bool unknownState = true;
+static bool jtagEnabled = false;
 
 static JTAGError_t errorState = OK;
-static JTAGChain_t JTAGChain = {0, NULL};
+
+static JTAGDevice_t Devices[JTAG_NUM_DEVICES];
+static JTAGChain_t JTAGChain = {JTAG_NUM_DEVICES, Devices};
+
 	
 /// Returns the current JTAG state
 JTAGState_t jtag_getState()
@@ -79,6 +83,32 @@ void jtag_addDevice( uint8_t IDCode, uint8_t IRLength )
 	
 	JTAGChain.length++;
 	
+	
+}
+
+const JTAGChain_t* JTAG_Mode()
+{
+	/// \todo Implement JTAG_Mode
+
+	// Configure JTAG pins
+	bit_set(JTAG_DDR, BIT(JTAG_TMS));
+	bit_set(JTAG_DDR, BIT(JTAG_TCK));
+	bit_set(JTAG_DDR, BIT(JTAG_TDI));
+	bit_clear(JTAG_DDR, BIT(JTAG_TDO));
+
+	// Enable JTAG
+	jtagEnabled = true;
+	
+	
+	// Return device chain information
+	return &JTAGChain;	
+	
+}
+
+bool JTAG_isEnabled()
+{	
+	
+	return jtagEnabled;
 	
 }
 

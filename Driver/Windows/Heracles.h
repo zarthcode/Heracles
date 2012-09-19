@@ -1,48 +1,38 @@
-#include <libusb/libusb.h>
+
 #include <string>
 #include <list>
 #include <memory>
+#include <libusbpp.h>
 
-using namespace std::tr1;
-
-class Heracles
+class Heracles : private LibUSB::Device
 {
 
 public:
 
 	/// Constructor
-	Heracles();
+	Heracles(std::shared_ptr<LibUSB::DeviceImpl> pInit);
 	
 	/// Destructor
 	virtual ~Heracles();
 
+	/// Configuration Mode
+
 protected:
 
-	virtual void Open();
-
-	virtual void Close();
-
+	/// Notification of a completed transfer
+	/// \warning This function can be called from other threads when using asynchronous transfers!
+	virtual void TransferEventNotification(std::shared_ptr<LibUSB::Transfer> pCompletedTransfer);
 		
 
+	
+
+
+	/// Keepalive generator
 
 private:
 
+	/// 
+
 	
-
-
-// Utility methods
-
-	std::wstring libusbTranslateResult(int LibusbResult);
-
-// Static members
-
-	libusb_context* getContext()const;
-	
-	
-	/// Global libusb context
-	static libusb_context* libusbContext;
-
-	// Number of libusb devices using this context.
-	static unsigned int deviceCount;
 };
 

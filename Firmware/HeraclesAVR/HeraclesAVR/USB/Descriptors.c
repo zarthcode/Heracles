@@ -83,25 +83,6 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 		.PollingIntervalMS      = 0x32
 	},
 	
-	.IsochronousOutEndpoint =
-	{
-		.Header					= {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
-		
-		.EndpointAddress		= (ENDPOINT_DIR_OUT | ISOCHRONOUS_OUT_EPNUM),
-		.Attributes				= EP_TYPE_ISOCHRONOUS,
-		.EndpointSize			= ISOCHRONOUS_OUT_EPSIZE,
-		.PollingIntervalMS		= 0x00
-	},	
-	
-	.IsochronousInEndpoint =
-	{
-		.Header					= {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
-	
-		.EndpointAddress		= (ENDPOINT_DIR_IN | ISOCHRONOUS_IN_EPNUM),
-		.Attributes				= EP_TYPE_ISOCHRONOUS,
-		.EndpointSize			= ISOCHRONOUS_IN_EPSIZE,
-		.PollingIntervalMS		= 0x00
-	}	
 
 
 };

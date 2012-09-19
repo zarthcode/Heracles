@@ -20,6 +20,8 @@
 #define JTAG_TDI			7
 #define JTAG_TDO			6
 
+#define JTAG_NUM_DEVICES	1
+
 // Support for nTRST/ seems unnecessary
 
 /// JTAG States
@@ -58,15 +60,29 @@ typedef struct JTAGDevice
 {
 	uint8_t IRLength;
 	uint8_t IDCODE;
-	struct JTAGDevice* nextDevice;
 } JTAGDevice_t;
 
 /// JTAG device chain description
 typedef struct
 {
-	uint8_t length;
-	JTAGDevice_t* firstDevice;
+	uint8_t length;					// Number of devices in chain
+	JTAGDevice_t* firstDevice;		// Pointer to first device
 } JTAGChain_t;
+
+
+// JTAG Mode
+
+/// Returns a description of the JTAG device chain and enables JTAG programming mode.
+const JTAGChain_t* JTAG_Mode();
+
+/// returns TRUE if JTAG mode is enabled
+bool JTAG_isEnabled();
+
+
+
+
+
+
 
 /// Returns current error code.
 JTAGError_t jtag_getLastError();

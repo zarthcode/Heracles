@@ -32,7 +32,7 @@
     <ClInclude Include="Heracles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="libusbcom.h">
+    <ClInclude Include="Commands.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
