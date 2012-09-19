@@ -58,6 +58,10 @@ Build
 build
 ipch
 
+# Atmel Studio User files #
+###########################
+*.atsuo
+
 # Temp files #
 ##############
 .*~
