@@ -16,6 +16,7 @@ public:
 	virtual ~Heracles();
 
 	/// Configuration Mode
+	virtual void Open();
 
 protected:
 

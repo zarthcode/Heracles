@@ -39,3 +39,15 @@ typedef struct
 	// [No parameters]
 
 
+// JTAG commands
+
+// DFU Command
+
+// Device Configuration
+// Configuration Modes
+typedef enum
+{
+	CONFIG_CLEAR,	// Clear device configuration
+	CONFIG_READ,	// Read configuration
+	CONFIG_WRITE	// Write configuration
+} ConfigurationMode_t;

@@ -6,6 +6,7 @@
  */ 
 
 #pragma once
+#include <stdbool.h>
 
 /// Heracles commands
 typedef enum
@@ -77,12 +78,100 @@ typedef enum
 		// Configuration Modes
 		typedef enum
 		{
+			
 			CONFIG_CLEAR,	// Clear device configuration
-			CONFIG_READ,	// Read configuration
-			CONFIG_WRITE	// Write configuration
-		} ConfigurationMode_t;
+			CONFIG_LOAD,	// Read configuration from EEPROM
+			CONFIG_SAVE,	// Write configuration to EEPROM
+			CONFIG_CHANNEL,	// Inits/Configures a motor channel
+			CONFIG_SWITCH,	// Configures a limit/homing switch
+			CONFIG_ENCODER,
+			CONFIG_HALL,
+			CONFIG_STEPPER,
+			CONFIG_DC,
+			CONFIG_BLDC
+			
+		} ConfigurationCommands_t;
 	
 	
+		// Configuration Commands
+		
+		// Configure Channel
+		typedef struct
+		{
+			uint8_t ChannelNumber;
+			ChannelTypes_t Type;
+			uint32_t VelocityLimit;
+			uint32_t AccelerationLimit;
+			
+		} CMDConfigureChannel_t;
+		
+		// Configure Switch
+		typedef struct
+		{
+			
+			uint8_t SwitchID;
+			uint8_t ChannelNumber;
+			SwitchState_t Type;
+			Direction_t Direction;
+			SwitchState_t NormalState;
+			
+		} CMDConfigureSwitch_t;
+		
+		// Configure Encoder
+		typedef struct
+		{
+			
+			uint8_t EncoderID;
+			uint8_t ChannelNumber;
+			EncoderType_t Type;
+			uint32_t Resolution;
+			uint32_t Accuracy;
+			uint32_t CPR;
+			bool bIndex;
+			bool bPersistence;
+			
+		} CMDConfigureEncoder_t;
+		
+		// Configure Hall
+		typedef struct
+		{
+			
+			uint8_t ChannelNumber;
+			uint8_t HallA;
+			uint8_t HallB;
+			uint8_t HallC;
+			
+		} CMDConfigureHall_t;
+		
+		// Configure Stepper
+		typedef struct
+		{
+			
+			uint8_t ChannelNumber;
+			uint8_t BridgeA;
+			uint8_t BridgeB;
+			
+		} CMDConfigureStepper_t;
+		
+		// Configure DC
+		typedef struct
+		{
+			
+			uint8_t ChannelNumber;
+			uint8_t BridgeA;
+			
+		} CMDConfigureDC_t;
+		
+		// Configure BLDC
+		typedef struct
+		{
+			
+			uint8_t ChannelNumber;
+			uint8_t BridgeA;
+			uint8_t BridgeB;
+			uint8_t BridgeC;
+			
+		} CMDConfigureBLDC_t;
 		
 	// Command Mode - Send commands to secondary MCU (Motion Planner)
 		

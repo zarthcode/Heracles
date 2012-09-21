@@ -252,9 +252,25 @@ void ProcessVendorControlRequest()
 				
 			}
 			
+				
+		}		
+		break;
+		
+		case COMMAND_Config:
+		{
 			
+			Endpoint_ClearSETUP();	// ACK SETUP Packet
 			
-		}			
+			// Receive the configuration command
+			unsigned char ConfigurationCommandBuffer[32];
+			Endpoint_Read_Control_Stream_LE(ConfigurationCommandBuffer, USB_ControlRequest.wValue);
+			Endpoint_ClearIN();
+			
+			// Dispatch the configuration command.
+			avrslcd_MoveCursor(2,1);
+			printf("%s", Buffer);
+			
+		}
 		break;
 	/*		
 		case COMMAND_Reset:

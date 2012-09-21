@@ -7,6 +7,9 @@
 
 #pragma once
 
+#include <stdbool.h>
+
+
 /// The maximum number of A3988 motor bridges available
 #define MAX_CHANNELS 20
 
@@ -51,8 +54,8 @@ typedef struct
 	uint32_t Resolution,			// Resolution
 	uint32_t Accuracy,				// Accuracy, in counts
 	uint32_t CPR,					// Counts per revolution
-	unsigned char bIndex,			// Indicates the presence of an index
-	unsigned char bPersistence		// Persistence (Store last known position/count)
+	bool bIndex,			// Indicates the presence of an index
+	bool bPersistence		// Persistence (Store last known position/count)
 	
 } EncoderConfig_t;
 	
@@ -62,6 +65,7 @@ typedef struct
 /// Indicates if the switch is a limit or homing switch
 typedef enum
 {
+	
 	SWITCH_NONE,
 	SWITCH_LIMIT,
 	SWITCH_HOME
@@ -104,21 +108,21 @@ typedef struct
 	uint32_t Velocity,		// Velocity Limits
 	uint32_t Acceleration,	// Acceleration Limits
 	
-} VectorLimits;
+} Limits_t;
 	
 /// Channel information
 /// A logical channel represents one device (stepper, dc motor, bldc, etc.)
 /// Each logical channel can utilize multiple bridges
 typedef struct
 {
-		
+	uint8_t Number,				// Channel number
 	ChannelTypes_t Type,		// Type of motor channel
-	VectorLimits Limits,		// Velocity and acceleration limits for this channel.
+	Limits_t Limits,		// Velocity and acceleration limits for this channel.
 		
 	EncoderConfig_t* Encoders[4],		// Encoders associated with this channel (4 Max)
 		
-	Bridge_t* Bridges[3],			// Listing of BridgeIDs this channel is mapped to. (3 Max)
-	uint8_t Switches[3],		// Homing and limit SwitchIDs this channel is associated with. (3 Max)
+	Bridge_t* Bridges[3],			// Listing of Bridges this channel is mapped to. (3 Max)
+	LimitSwitch_t* Switches[3],		// Homing and limit SwitchIDs this channel is associated with. (3 Max)
 		
 } Channel_t;
 	
@@ -143,14 +147,22 @@ void LoadConfiguration();
 void SaveConfiguration();
 
 /// Configures a Channel
-void ConfigureChannel( uint8_t chNum, Channel_t* pChannel );
-
-/// Assigns a bridge to a channel.
-void ConfigureBridge( uint8_t chNum, uint8_t BridgeID );
+void ConfigureChannel( uint8_t chNum, ChannelTypes_t chType, VectorLimits Limits);
 
 /// Configures a limit switch
-void ConfigureSwitch( uint8_t chNum, uint8_t SwitchID, SwitchState_t Type, Direction_t Direction, SwitchState_t NormalState );
+void ConfigureSwitch( uint8_t SwitchID, uint8_t chNum, SwitchState_t Type, Direction_t Direction, SwitchState_t NormalState );
 
 /// Configure an encoder
-void ConfigureEncoder( EncoderConfig_t* pEncoder );
+void ConfigureEncoder( uint8_t EncoderID, uint8_t chNum, EncoderType_t Type, uint32_t Resolution, uint32_t Accuracy, uint32_t CPR, bool bIndex, bool bPersistence );
 
+/// Configures Hall encoders for a BLDC channel
+void ConfigureHall(uint8_t chNum, uint8_t HallA, uint8_t HallB, uint8_t HallC);
+
+/// Configures a stepper motor
+void ConfigureStepper(uint8_t chNum, uint8_t BridgeA, uint8_t BridgeB);
+
+/// Configures a DC motor
+void ConfigureDC(uint8_t chNum, uint8_t Bridge);
+
+/// Configures a BLDC motor
+void ConfigureBLDC(uint8_t chNum, uint8_t BridgeU, uint8_t BridgeV, uint8_t BridgeW);
