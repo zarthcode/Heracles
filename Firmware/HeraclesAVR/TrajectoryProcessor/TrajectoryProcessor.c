@@ -6,24 +6,27 @@
  */ 
 
 #include <avr/io.h>
+#include <uart.h>
 
 int function(void)
 {
-    //TODO:: Please write your application code
 
 	// Configure interrupts
 	
-		// ESTOP interrupt
+		// ESTOP interrupt-on-change
+		
 
+	// Initialize UART
+	
 
 
 	// Main loop
 	while(1)
 	{
 		
-		// Check for new commands
+		// Check for new commands from SPI
 		
-		// 
+		// Dispatch
 		
 		
 	}

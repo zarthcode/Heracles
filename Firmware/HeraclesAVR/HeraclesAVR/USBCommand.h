@@ -44,7 +44,12 @@ typedef enum
 	} VersionCommand_t;
 	
 	// ESTOP Control Command
-		// [No parameters]
+	typedef enum
+	{
+		ESTOP_SET,		// Forces the controller into an E-STOP condition.
+		ESTOP_CLEAR,	// Clears a forced E-STOP condition
+		ESTOP_GET		// Returns the current E-STOP condition
+	};
 	
 	
 	// JTAG Mode - Directly program jtag devices (MCU and CPLD)
@@ -53,8 +58,7 @@ typedef enum
 		JTAGState_t state;
 		size_t DataLength;	// Data Length
 		
-		// Data
-		unsigned char Data*;
+		// Data goes here.
 		
 	} JTAGCommand_t;
 	
@@ -64,8 +68,7 @@ typedef enum
 		JTAGError_t code;
 		size_t DataLength;
 		
-		// Data
-		unsigned char Data*;
+		// Data goes here
 	} JTAGStatus_t;
 			
 	
@@ -173,24 +176,38 @@ typedef enum
 			
 		} CMDConfigureBLDC_t;
 		
-	// Command Mode - Send commands to secondary MCU (Motion Planner)
-		
-		// Open Loop Speed Mode
+		// PID Configuration
 		
 		
-		// Closed Loop Speed Mode
-		
-		// Closed Loop Position Mode
-		
-		// Open Loop Position Mode
+	// Motion Commands- Send motion commands to secondary MCU (Motion Planner)
 	
 	// Positioning commands
 	
 		// Set velocity
+		
 		// Set position
 		
 			// Acceleration
 			// Speed
 			// Deacceleration
 			
+		// Home
+			
+	// Configure extra GPIO pins
+		
+		// Configure direction
+	
+		// Retrieve data
+		
+		// Send data
+		
+	// Status
+	
+		// Get position
+		
+		// Get velocity
+	
+		// Commands
+		
+		//
 		

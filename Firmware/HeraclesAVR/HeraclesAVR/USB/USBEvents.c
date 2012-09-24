@@ -13,8 +13,7 @@
 
 void EVENT_USB_Device_Connect(void)
 {
-	avrslcd_MoveCursor(1,1);
-	printf("Connected");
+	// Connected.
 }
 
 

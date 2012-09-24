@@ -21,5 +21,5 @@
 #endif
 
 
-
 void GetVersionInformation(VersionCommand_t* pVersionCommand);
+

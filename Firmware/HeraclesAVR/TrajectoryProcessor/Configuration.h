@@ -156,13 +156,13 @@ void ConfigureSwitch( uint8_t SwitchID, uint8_t chNum, SwitchState_t Type, Direc
 void ConfigureEncoder( uint8_t EncoderID, uint8_t chNum, EncoderType_t Type, uint32_t Resolution, uint32_t Accuracy, uint32_t CPR, bool bIndex, bool bPersistence );
 
 /// Configures Hall encoders for a BLDC channel
-void ConfigureHall(uint8_t chNum, uint8_t HallA, uint8_t HallB, uint8_t HallC);
+void ConfigureHall( uint8_t chNum, uint8_t HallA, uint8_t HallB, uint8_t HallC);
 
 /// Configures a stepper motor
-void ConfigureStepper(uint8_t chNum, uint8_t BridgeA, uint8_t BridgeB);
+void ConfigureStepper( uint8_t chNum, uint8_t BridgeA, uint8_t BridgeB);
 
 /// Configures a DC motor
-void ConfigureDC(uint8_t chNum, uint8_t Bridge);
+void ConfigureDC( uint8_t chNum, uint8_t Bridge);
 
 /// Configures a BLDC motor
-void ConfigureBLDC(uint8_t chNum, uint8_t BridgeU, uint8_t BridgeV, uint8_t BridgeW);
+void ConfigureBLDC( uint8_t chNum, uint8_t BridgeU, uint8_t BridgeV, uint8_t BridgeW);
