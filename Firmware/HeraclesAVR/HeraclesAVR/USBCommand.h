@@ -177,7 +177,15 @@ typedef enum
 		} CMDConfigureBLDC_t;
 		
 		// PID Configuration
-		
+		typedef struct  
+		{
+			
+			uint8_t ChannelNumber;
+			int32_t Kp;
+			int32_t Ki;
+			int32_t Kd;
+			
+		} CMDConfigurePID;
 		
 	// Motion Commands- Send motion commands to secondary MCU (Motion Planner)
 	
@@ -192,6 +200,8 @@ typedef enum
 			// Deacceleration
 			
 		// Home
+		
+	
 			
 	// Configure extra GPIO pins
 		

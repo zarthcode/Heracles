@@ -166,3 +166,9 @@ void ConfigureDC( uint8_t chNum, uint8_t Bridge);
 
 /// Configures a BLDC motor
 void ConfigureBLDC( uint8_t chNum, uint8_t BridgeU, uint8_t BridgeV, uint8_t BridgeW);
+
+/// Configure a PID Controller
+void ConfigurePID( uint8_t chNum, int32_t Kp, int32_t Ki, int32_t Kd);
+
+/// Configure a secondary (outer-loop) PID Controller
+void ConfigurePID2( uint8_t chNum, int32_t Kp, int32_t Ki, int32_t Kd);
