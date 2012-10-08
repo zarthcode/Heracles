@@ -1,0 +1,82 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=work
+
+[Library]
+Heracles=.\Heracles.LIB
+work=.\work\work.lib
+
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FAMILY=
+WireDelay=2
+SimulationAccessReadModules=
+SimulationAccessReadWriteModules=
+SimulationAccessReadPaths=
+SimulationAccessReadWritePaths=
+SimulationAccessNetsPaths=
+SimulationAccessNetsModules=
+fileopenfolder=D:\Workspace\Heracles\Firmware\MachXO2
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=pmi_work;
+LibNames=ovi_machxo2;
+MonitoringOfEventsUDP=0
+DisablePulseError=0
+HasInitialRegsValue=0
+InitialRegsValue=X
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+Heracles=.
+work=.
+
+[LocalVerilogDirs]
+Count=0
+
+[DefineMacro]
+Global=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/..\..\DCMotorChannel.v=-1
+/..\..\DCMotorChannel_tb.v=-1
+/..\..\Heracles.awc=-1
+/..\..\DCMotorChannel_tb_wave.do=-1
+/..\..\StepperChannel.v=-1
+/..\..\StepperChannel_tb.v=-1
+/stepperchannel_tb_wave.do=-1
+
+[Files.Data]
+.\..\DCMotorChannel.v=Verilog Source Code
+.\..\DCMotorChannel_tb.v=Verilog Source Code
+.\..\Heracles.awc=Accelerated Waveform Configuration
+.\..\DCMotorChannel_tb_wave.do=Macro
+.\..\StepperChannel.v=Verilog Source Code
+.\..\StepperChannel_tb.v=Verilog Source Code
+.\src\stepperchannel_tb_wave.do=Macro
+

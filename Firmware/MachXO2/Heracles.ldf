@@ -3,10 +3,34 @@
     <Options/>
     <Implementation title="Heracles" dir="Heracles" description="Heracles" default_strategy="Strategy1">
         <Options/>
-        <Source name="EncoderCounter.v" type="Verilog" type_short="Verilog">
+        <Source name="DCMotorChannel.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="DCMotorChannel_tb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="StepperChannel.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="StepperChannel_tb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="IncrementalEncoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="IncrementalEncoder_tb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="AbsoluteEncoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="QuadatureEncoder.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="Heracles.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="Heracles/Heracles.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
     </Implementation>

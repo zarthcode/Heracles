@@ -1,0 +1,351 @@
+<HTML>
+<HEAD><TITLE>Synthesis Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+#Build: Synplify Pro F-2012.03L , Build 063R, May 17 2012
+#install: C:\lscc\diamond\2.0\synpbase
+#OS: Windows 7 6.1
+#Hostname: ZARTHCODE-7
+
+#Implementation: Heracles
+
+$ Start of Compile
+#Thu Oct 04 20:05:02 2012
+
+Synopsys Verilog Compiler, version comp201203rcp1, Build 061R, built May 17 2012
+@N|Running in 64-bit mode
+Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\lscc\diamond\2.0\synpbase\lib\lucent\machxo2.v"
+@I::"C:\lscc\diamond\2.0\synpbase\lib\lucent\pmi_def.v"
+@I::"C:\lscc\diamond\2.0\synpbase\lib\vlog\umr_capim.v"
+@I::"C:\lscc\diamond\2.0\synpbase\lib\vlog\scemi_objects.v"
+@I::"C:\lscc\diamond\2.0\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"C:\lscc\diamond\2.0\synpbase\lib\vlog\hypermods.v"
+@I::"C:\lscc\diamond\2.0\cae_library\synthesis\verilog\machxo2.v"
+@I::"D:\Workspace\Heracles\Firmware\MachXO2\EncoderCounter.v"
+@I::"D:\Workspace\Heracles\Firmware\MachXO2\DCMotorChannel.v"
+@I::"D:\Workspace\Heracles\Firmware\MachXO2\DCMotorChannel_tb.v"
+@I::"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel.v"
+@I::"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v"
+Verilog syntax check successful!
+Selecting top level module StepperChannel_tb
+@W: CG730 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":3:7:3:23|Top-level module StepperChannel_tb has no ports
+
+@N: CG364 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel.v":6:7:6:20|Synthesizing module StepperChannel
+
+@N: CG364 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":3:7:3:23|Synthesizing module StepperChannel_tb
+
+@W: CG294 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":16:1:16:6|always block should contain at least one event control
+@W: CG532 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":20:1:20:7|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
+@W: CG133 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":5:15:5:23|No assignment to direction
+@W: CG133 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":5:26:5:38|No assignment to modified_mode
+@W: CG133 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":6:11:6:24|No assignment to microstep_size
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":8:6:8:18|No assignment to wire testphase1_I0
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":8:21:8:33|No assignment to wire testphase1_I1
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":8:36:8:51|No assignment to wire testphase1_phase
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":9:6:9:18|No assignment to wire testphase2_I0
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":9:21:9:33|No assignment to wire testphase2_I1
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":9:36:9:51|No assignment to wire testphase2_phase
+
+@W: CL168 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":74:16:74:22|Pruning instance Test_CH -- not in use ...
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Oct 04 20:05:02 2012
+
+###########################################################]
+Premap Report
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 401R, Built May 25 2012 11:07:37
+Copyright (C) 1994-2012, Synopsys Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version F-2012.03L 
+
+Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+@L: D:\Workspace\Heracles\Firmware\MachXO2\Heracles\Heracles_Heracles_scck.rpt 
+Printing clock  summary report in "D:\Workspace\Heracles\Firmware\MachXO2\Heracles\Heracles_Heracles_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF257 |Gated clock conversion enabled 
+@N: MF546 |Generated clock conversion enabled 
+
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+Start loading timing files (Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 105MB)
+
+
+Finished loading timing files (Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 107MB)
+
+
+
+Clock Summary
+**************
+
+Start      Requested     Requested     Clock      Clock          
+Clock      Frequency     Period        Type       Group          
+-----------------------------------------------------------------
+System     1.0 MHz       1000.000      system     system_clkgroup
+=================================================================
+
+syn_allowed_resources : blockrams=7  set on top level netlist StepperChannel_tb
+
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 132MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 66MB peak: 132MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Oct 04 20:05:03 2012
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys Lattice Technology Mapper, Version maplat, Build 401R, Built May 25 2012 11:07:37
+Copyright (C) 1994-2012, Synopsys Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version F-2012.03L 
+
+Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF257 |Gated clock conversion enabled 
+@N: MF546 |Generated clock conversion enabled 
+
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+Start loading timing files (Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 105MB)
+
+
+Finished loading timing files (Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 107MB)
+
+@N: MF203 |Set autoconstraint_io 
+
+
+Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+
+
+#################### START OF GENERATED CLOCK OPTIMIZATION REPORT ####################[
+
+======================================================================================
+                                Instance:Pin        Generated Clock Optimization Status
+======================================================================================
+
+
+##################### END OF GENERATED CLOCK OPTIMIZATION REPORT #####################]
+
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+------------------------------------------------------------
+
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+@N: FX164 |The option to pack flops in the IOB has not been specified 
+
+Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+
+Writing Analyst data base D:\Workspace\Heracles\Firmware\MachXO2\Heracles\Heracles_Heracles.srm
+
+Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+
+Writing EDIF Netlist and constraint files
+F-2012.03L 
+
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
+
+
+Starting Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+
+@N: MF276 |Gated clock conversion enabled, but no gated clocks found in design 
+
+Finished Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+
+
+Starting Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+
+@N: MF333 |Generated clock conversion enabled, but no generated clocks found in design 
+
+Finished Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Thu Oct 04 20:05:05 2012
+#
+
+
+Top view:               StepperChannel_tb
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        3
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT321 |Clock constraints cover all FF-to-FF, FF-to-output, input-to-FF and input-to-output paths associated with a particular clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: NA
+
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo2_1200ze-1
+
+Register bits: 0 of 1280 (0%)
+PIC Latch:       0
+I/O cells:       0
+
+
+Details:
+GSR:            1
+PUR:            1
+VHI:            1
+VLO:            1
+false:          1
+true:           1
+Mapper successful!
+
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 39MB peak: 135MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Oct 04 20:05:05 2012
+
+###########################################################]
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

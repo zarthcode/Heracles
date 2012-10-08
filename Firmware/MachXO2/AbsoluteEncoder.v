@@ -1,0 +1,2 @@
+
+module AbsoluteEncoder ( ADCValue, 

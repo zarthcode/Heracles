@@ -1,0 +1,2 @@
+@E: CG906 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel.v":118:21:118:21|Reference to unknown variable x.
+

@@ -1,0 +1,1 @@
+ -erf "d:\Workspace\Heracles\Firmware\MachXO2\Heracles\compile\Heracles.erf" -work work -lc d:/Workspace/Heracles/Firmware/MachXO2/Heracles/library.cfg -fl d:/Workspace/Heracles/Firmware/MachXO2/Heracles/projlib.cfg -o d:/Workspace/Heracles/Firmware/MachXO2/Heracles/compile -l "work" -sve   -O2

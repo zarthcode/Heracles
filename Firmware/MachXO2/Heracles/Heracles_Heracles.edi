@@ -1,0 +1,59 @@
+(edif StepperChannel_tb
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timeStamp 2012 10 4 20 5 4)
+      (author "Synopsys, Inc.")
+      (program "Synplify Pro" (version "F-2012.03L , mapper maplat, Build 401R"))
+     )
+   )
+  (library LUCENT
+    (edifLevel 0)
+    (technology (numberDefinition ))
+    (cell GSR (cellType GENERIC)
+       (view PRIM (viewType NETLIST)
+         (interface
+           (port GSR (direction INPUT))
+         )
+       )
+    )
+    (cell VHI (cellType GENERIC)
+       (view PRIM (viewType NETLIST)
+         (interface
+           (port Z (direction OUTPUT))
+         )
+       )
+    )
+    (cell VLO (cellType GENERIC)
+       (view PRIM (viewType NETLIST)
+         (interface
+           (port Z (direction OUTPUT))
+         )
+       )
+    )
+  )
+  (library work
+    (edifLevel 0)
+    (technology (numberDefinition ))
+    (cell StepperChannel_tb (cellType GENERIC)
+       (view verilog (viewType NETLIST)
+         (interface
+         )
+         (contents
+          (instance GSR_INST (viewRef PRIM (cellRef GSR (libraryRef LUCENT)))
+          )
+          (instance VCC_0 (viewRef PRIM (cellRef VHI (libraryRef LUCENT)))          )
+          (instance GND_0 (viewRef PRIM (cellRef VLO (libraryRef LUCENT)))          )
+          (net VCC (joined
+           (portRef Z (instanceRef VCC_0))
+           (portRef GSR (instanceRef GSR_INST))
+          ))
+         )
+       )
+    )
+  )
+  (design StepperChannel_tb (cellRef StepperChannel_tb (libraryRef work))
+	(property PART (string "lcmxo2_1200ze-1") ))
+)

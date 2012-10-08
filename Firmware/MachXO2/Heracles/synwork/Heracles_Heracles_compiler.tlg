@@ -1,0 +1,26 @@
+Selecting top level module StepperChannel_tb
+@W: CG730 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":3:7:3:23|Top-level module StepperChannel_tb has no ports
+
+@N: CG364 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel.v":6:7:6:20|Synthesizing module StepperChannel
+
+@N: CG364 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":3:7:3:23|Synthesizing module StepperChannel_tb
+
+@W: CG294 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":16:1:16:6|always block should contain at least one event control
+@W: CG532 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":20:1:20:7|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
+@W: CG133 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":5:15:5:23|No assignment to direction
+@W: CG133 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":5:26:5:38|No assignment to modified_mode
+@W: CG133 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":6:11:6:24|No assignment to microstep_size
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":8:6:8:18|No assignment to wire testphase1_I0
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":8:21:8:33|No assignment to wire testphase1_I1
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":8:36:8:51|No assignment to wire testphase1_phase
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":9:6:9:18|No assignment to wire testphase2_I0
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":9:21:9:33|No assignment to wire testphase2_I1
+
+@W: CG360 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":9:36:9:51|No assignment to wire testphase2_phase
+
+@W: CL168 :"D:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v":74:16:74:22|Pruning instance Test_CH -- not in use ...
+

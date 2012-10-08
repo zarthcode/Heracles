@@ -1,0 +1,58 @@
+timestamp=1349455323841
+
+[$root]
+A/$root=22|""|0|1*484821
+BinI32/$root=3*415803
+Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[DCMotorChannel]
+A/DCMotorChannel=22|./../../DCMotorChannel.v|3|1*472927
+BinI32/DCMotorChannel=3*404075
+P/~emb=370,597,922,1049
+R=./../../DCMotorChannel.v|3
+Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[DCMotorChannel_tb]
+A/DCMotorChannel_tb=22|./../../DCMotorChannel_tb.v|3|1*474848
+BinI32/DCMotorChannel_tb=3*405256
+P/~emb=106,489,793,1053
+R=./../../DCMotorChannel_tb.v|3
+Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[StepperChannel]
+A/StepperChannel=22|./../../StepperChannel.v|6|1*477043
+BinI32/StepperChannel=3*407206
+P/~emb=542,849,2008,2483
+R=./../../StepperChannel.v|6
+Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[StepperChannel_tb]
+A/StepperChannel_tb=22|./../../StepperChannel_tb.v|3|1*485243
+BinI32/StepperChannel_tb=3*415942
+P/~emb=648,1400,2468,3017
+R=./../../StepperChannel_tb.v|3
+Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[~A]
+D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel.v=0*11757*12412
+D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel.v_DCMotorChannel_tb.v=0*54135*55259
+D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel_tb.v=0*26531*27349
+LastVerilogToplevel=StepperChannel_tb
+ModifyID=2504
+Version=73
+d:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel.v_DCMotorChannel_tb.v_StepperChannel.v_StepperChannel_tb.v=0*570655*574088
+d:/Workspace/Heracles/Firmware/MachXO2/StepperChannel.v=0*557241*558601
+d:/Workspace/Heracles/Firmware/MachXO2/StepperChannel_tb.v=0*579216*580979
+
+[~MFT]
+0=445|0work.mgf|580979|153389
+1=422|1work.mgf|485243|478385
+3=422|3work.mgf|415942|409029
+
+[~U]
+$root=12|0*574665|
+DCMotorChannel=12|0*559303||0x80
+DCMotorChannel_tb=12|0*560691||0x90
+StepperChannel=12|0*562189||0x80
+StepperChannel_tb=12|0*574863||0x90
+

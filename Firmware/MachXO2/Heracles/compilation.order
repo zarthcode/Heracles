@@ -1,0 +1,4 @@
+.\..\DCMotorChannel.v
+.\..\DCMotorChannel_tb.v
+.\..\StepperChannel.v
+.\..\StepperChannel_tb.v
