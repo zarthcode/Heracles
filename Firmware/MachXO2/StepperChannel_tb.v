@@ -182,48 +182,50 @@ module StepperChannel_tb();
 
 		reg [3:0] start_seq, end_seq, microstepping;
 		reg [3:0] expected_seq;
-		
-		case(microstepping)
-			1:	// Full step (3,7,11,15)
-				begin
-					
-					// sequence_position is unsigned, wrapping is automatic!
-					if(direction)
-						expected_seq = start_seq + 4;
-					else
-						expected_seq = start_seq - 4;						
-					
-				end
-			2:	// Half step (1,3,5,7,9,11,13,16)
-				begin
-					
-					// sequence_position is unsigned, wrapping is automatic!
-					if(direction)
-						expected_seq = start_seq + 2;
-					else
-						expected_seq = start_seq - 2;						
-					
-				end
-			4:	// Quarter-step (1..16)
-				begin
-					
-					// sequence_position is unsigned, wrapping is automatic!
-					if(direction)
-						expected_seq = start_seq + 1;
-					else
-						expected_seq = start_seq - 1;						
-					
-				end
-			
-		endcase
-		
-		if(end_seq != expected_seq)
 		begin
-			correct_step = 0;
-			$display("Expected transition to sequence %d", expected_seq);
+			
+			case(microstepping)
+				1:	// Full step (3,7,11,15)
+					begin
+						
+						// sequence_position is unsigned, wrapping is automatic!
+						if(direction)
+							expected_seq = start_seq + 4;
+						else
+							expected_seq = start_seq - 4;						
+						
+					end
+				2:	// Half step (1,3,5,7,9,11,13,16)
+					begin
+						
+						// sequence_position is unsigned, wrapping is automatic!
+						if(direction)
+							expected_seq = start_seq + 2;
+						else
+							expected_seq = start_seq - 2;						
+						
+					end
+				4:	// Quarter-step (1..16)
+					begin
+						
+						// sequence_position is unsigned, wrapping is automatic!
+						if(direction)
+							expected_seq = start_seq + 1;
+						else
+							expected_seq = start_seq - 1;						
+						
+					end
+				
+			endcase
+			
+			if(end_seq != expected_seq)
+			begin
+				correct_step = 0;
+				$display("Expected transition to sequence %d", expected_seq);
+			end
+			else begin
+				correct_step = 1;
+			end
 		end
-		else
-			correct_step = 1;
-		
 	endfunction
 endmodule

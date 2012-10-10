@@ -1,2 +1,5 @@
 
-module AbsoluteEncoder ( ADCValue, 
+module AbsoluteEncoder ( ADCValue, clk);
+	
+	
+endmodule

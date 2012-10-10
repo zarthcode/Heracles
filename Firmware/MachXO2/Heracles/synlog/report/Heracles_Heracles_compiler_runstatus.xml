@@ -14,11 +14,11 @@ The file contains the job information from compiler to be displayed as part of t
   </job_status>
 <job_info> 
 			<info name="Notes">
-  <data>3</data>
+  <data>2</data>
   <report_link name="more"><data>D:\Workspace\Heracles\Firmware\MachXO2\Heracles\synlog\report\Heracles_Heracles_compiler_notes.txt</data></report_link>
   </info>
 			<info name="Warnings">
-  <data>13</data>
+  <data>2</data>
   <report_link name="more"><data>D:\Workspace\Heracles\Firmware\MachXO2\Heracles\synlog\report\Heracles_Heracles_compiler_warnings.txt</data></report_link>
   </info>
 			<info name="Errors">
@@ -35,7 +35,7 @@ The file contains the job information from compiler to be displayed as part of t
   <data>-</data>
   </info>
 			<info name="Date &amp;Time">
-  <data type="timestamp">1349399102</data>
+  <data type="timestamp">1349826135</data>
   </info>
 			</job_info>
 </job_run_status>

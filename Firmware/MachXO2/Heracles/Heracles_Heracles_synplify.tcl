@@ -45,11 +45,15 @@ set_option -resolve_multiple_driver 1
 #-- add_file options
 set_option -include_path {D:/Workspace/Heracles/Firmware/MachXO2}
 add_file -verilog {C:/lscc/diamond/2.0/cae_library/synthesis/verilog/machxo2.v}
-add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/EncoderCounter.v}
 add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel.v}
 add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel_tb.v}
 add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/StepperChannel.v}
 add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/StepperChannel_tb.v}
+add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/IncrementalEncoder.v}
+add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/IncrementalEncoder_tb.v}
+add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/AbsoluteEncoder.v}
+add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/PIDController.v}
+add_file -verilog {D:/Workspace/Heracles/Firmware/MachXO2/Integrator.v}
 
 
 #-- set result format/file last

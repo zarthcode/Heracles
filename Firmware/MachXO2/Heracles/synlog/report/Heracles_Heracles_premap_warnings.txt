@@ -1,0 +1,1 @@
+@W: MT529 :"d:\workspace\heracles\firmware\machxo2\integrator.v":25:1:25:6|Found inferred clock Integrator|clk which controls 128 sequential elements including result[63:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

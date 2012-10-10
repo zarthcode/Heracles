@@ -26,21 +26,24 @@ Finished loading timing files (Time elapsed 0h:00m:00s; Memory used current: 105
 Clock Summary
 **************
 
-Start      Requested     Requested     Clock      Clock          
-Clock      Frequency     Period        Type       Group          
------------------------------------------------------------------
-System     1.0 MHz       1000.000      system     system_clkgroup
-=================================================================
+Start              Requested     Requested     Clock        Clock              
+Clock              Frequency     Period        Type         Group              
+-------------------------------------------------------------------------------
+System             1.0 MHz       1000.000      system       system_clkgroup    
+Integrator|clk     1.0 MHz       1000.000      inferred     Inferred_clkgroup_0
+===============================================================================
 
-syn_allowed_resources : blockrams=7  set on top level netlist StepperChannel_tb
+@W: MT529 :"d:\workspace\heracles\firmware\machxo2\integrator.v":25:1:25:6|Found inferred clock Integrator|clk which controls 128 sequential elements including result[63:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 132MB)
+syn_allowed_resources : blockrams=7  set on top level netlist Integrator
+
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 132MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 66MB peak: 132MB)
+At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 132MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu Oct 04 20:05:03 2012
+# Tue Oct 09 18:42:18 2012
 
 ###########################################################]

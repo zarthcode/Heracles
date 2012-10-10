@@ -1,12 +1,12 @@
 # Synospys Constraint Checker(syntax only), version maplat, Build 401R, built May 25 2012
 # Copyright (C) 1994-2012, Synopsys Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
 
-# Written on Thu Oct 04 20:05:03 2012
+# Written on Tue Oct 09 18:42:17 2012
 
 
 ##### DESIGN INFO #######################################################
 
-Top View:                "StepperChannel_tb"
+Top View:                "Integrator"
 Constraint File(s):      (none)
 
 #Run constraint checker to find more issues with constraints.
@@ -21,8 +21,9 @@ No issues found in constraint syntax.
 Clock Summary
 **************
 
-Start      Requested     Requested     Clock      Clock          
-Clock      Frequency     Period        Type       Group          
------------------------------------------------------------------
-System     1.0 MHz       1000.000      system     system_clkgroup
-=================================================================
+Start              Requested     Requested     Clock        Clock              
+Clock              Frequency     Period        Type         Group              
+-------------------------------------------------------------------------------
+System             1.0 MHz       1000.000      system       system_clkgroup    
+Integrator|clk     1.0 MHz       1000.000      inferred     Inferred_clkgroup_0
+===============================================================================

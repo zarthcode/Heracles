@@ -13,12 +13,14 @@ module IncrementalEncoder ( A, B, I, Position, DataBus, Reset, SetCPR, SetPositi
 	
 	// Output
 	output reg signed [buswidth-1:0] Position;		// Consider a 32-bit count?
+	// Index register?
 	
 	// Internal variables
 	
 	reg [buswidth-1:0] CPR;		// CPR (Counts per revolution) setting
 	reg CPR_enabled;			// flag that indicates the cpr should be used.
-	reg Index_enabled; 					// flag that indicates that index should be used/enabled
+	reg Index_enabled; 			// flag that indicates that index should be used/enabled
+	reg IndexOnly_enabled;
 	
 	reg Direction;				// Flag used to indicate current direction.
 	parameter Dir_CW = 1;		// CW Direction constant
@@ -107,9 +109,16 @@ module IncrementalEncoder ( A, B, I, Position, DataBus, Reset, SetCPR, SetPositi
 			
 			
 		end
+		else if (Index_enabled) begin
+			
+			// If moving clockwise, pop position back to zero
+			// Increment separate index count.
+			
+		end
 
 		/// \todo Check for CPR accuracy?
 		/// \todo One-time Position-tuning
+		/// \todo
 	
 	end
 	

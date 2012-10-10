@@ -8,10 +8,10 @@ The file contains the area information from mapper to be displayed as part of th
 <data>D:\Workspace\Heracles\Firmware\MachXO2\Heracles\synlog\report\Heracles_Heracles_fpga_mapper_resourceusage.rpt</data>
 </report_link>
 <parameter tooltip="Total Register bits used" name="Register bits">
-<data>0</data>
+<data>128</data>
 </parameter>
 <parameter tooltip="Total I/O cells used" name="I/O cells">
-<data>0</data>
+<data>129</data>
 </parameter>
 <parameter tooltip="Total Block RAMs used" name="Block RAMs">
 <data>0</data>
@@ -20,6 +20,6 @@ The file contains the area information from mapper to be displayed as part of th
 <data>0</data>
 </parameter>
 <parameter tooltip="Total ORCA LUTs used" name="ORCA LUTs">
-<data>0</data>
+<data>1</data>
 </parameter>
 </report_table>

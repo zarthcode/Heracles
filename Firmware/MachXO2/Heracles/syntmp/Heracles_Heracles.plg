@@ -1,4 +1,24 @@
-@P:  Worst Slack : NA
-@P:  Worst Slack(min analysis) : NA
-@P:  Total Area : 0.0
-@P:  CPU Time : 0h:00m:00s
+@P:  Worst Slack : 990.259
+@P:  Integrator|clk - Estimated Frequency : 115.3 MHz
+@P:  Integrator|clk - Requested Frequency : 1.0 MHz
+@P:  Integrator|clk - Estimated Period : 8.670
+@P:  Integrator|clk - Requested Period : 1000.000
+@P:  Integrator|clk - Slack : 991.330
+@P:  System - Estimated Frequency : 102.7 MHz
+@P:  System - Requested Frequency : 1.0 MHz
+@P:  System - Estimated Period : 9.741
+@P:  System - Requested Period : 1000.000
+@P:  System - Slack : 990.259
+@P:  Worst Slack(min analysis) : 1.225
+@P:  Integrator|clk - Estimated Frequency(min analysis) : 115.3 MHz
+@P:  Integrator|clk - Requested Frequency(min analysis) : 1.0 MHz
+@P:  Integrator|clk - Estimated Period(min analysis) : 8.670
+@P:  Integrator|clk - Requested Period(min analysis) : 1000.000
+@P:  Integrator|clk - Slack(min analysis) : 991.330
+@P:  System - Estimated Frequency(min analysis) : 1.0 MHz
+@P:  System - Requested Frequency(min analysis) : 1.0 MHz
+@P:  System - Estimated Period(min analysis) : 998.638
+@P:  System - Requested Period(min analysis) : 1000.000
+@P:  System - Slack(min analysis) : 1.362
+@P:  Total Area : 1.0
+@P:  CPU Time : 0h:00m:01s

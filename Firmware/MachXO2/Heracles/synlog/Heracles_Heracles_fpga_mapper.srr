@@ -22,17 +22,17 @@ Finished loading timing files (Time elapsed 0h:00m:00s; Memory used current: 105
 @N: MF203 |Set autoconstraint_io 
 
 
-Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 132MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 132MB)
 
 
-Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 
 
@@ -46,25 +46,26 @@ Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 13
 ##################### END OF GENERATED CLOCK OPTIMIZATION REPORT #####################]
 
 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 
-Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
@@ -73,59 +74,64 @@ Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 @N: FX164 |The option to pack flops in the IOB has not been specified 
 
-Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 131MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 132MB)
 
 Writing Analyst data base D:\Workspace\Heracles\Firmware\MachXO2\Heracles\Heracles_Heracles.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 131MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 132MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03L 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 135MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:01s; Memory used current: 135MB peak: 137MB)
 
 
-Starting Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Starting Writing Gated Clock Conversion Report (Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 137MB)
 
 @N: MF276 |Gated clock conversion enabled, but no gated clocks found in design 
 
-Finished Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Finished Writing Gated Clock Conversion Report (Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 137MB)
 
 
-Starting Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Starting Writing Generated Clock Conversion Report (Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 137MB)
 
 @N: MF333 |Generated clock conversion enabled, but no generated clocks found in design 
 
-Finished Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 135MB)
+Finished Writing Generated Clock Conversion Report (Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 137MB)
+
+@W: MT420 |Found inferred clock Integrator|clk with period 1000.00ns. Please declare a user-defined clock on object "p:clk"
 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Thu Oct 04 20:05:05 2012
+# Timing Report written on Tue Oct 09 18:42:20 2012
 #
 
 
-Top view:               StepperChannel_tb
+Top view:               Integrator
 Requested Frequency:    1.0 MHz
 Wire load mode:         top
 Paths requested:        3
 Constraint File(s):    
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 
-@N: MT321 |Clock constraints cover all FF-to-FF, FF-to-output, input-to-FF and input-to-output paths associated with a particular clock.
-
-
 
 Performance Summary 
 *******************
 
 
-Worst slack in design: NA
+Worst slack in design: 990.259
 
+                   Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack       Type         Group              
+-----------------------------------------------------------------------------------------------------------------------
+Integrator|clk     1.0 MHz       115.3 MHz     1000.000      8.670         991.330     inferred     Inferred_clkgroup_0
+System             1.0 MHz       102.7 MHz     1000.000      9.741         990.259     system       system_clkgroup    
+=======================================================================================================================
 
 
 
@@ -134,11 +140,14 @@ Worst slack in design: NA
 Clock Relationships
 *******************
 
-Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
---------------------------------------------------------------------------------------------------------
-Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
---------------------------------------------------------------------------------------------------------
-========================================================================================================
+Clocks                          |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------
+Starting        Ending          |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------
+System          Integrator|clk  |  1000.000    990.259  |  No paths    -      |  No paths    -      |  No paths    -    
+Integrator|clk  System          |  1000.000    996.352  |  No paths    -      |  No paths    -      |  No paths    -    
+Integrator|clk  Integrator|clk  |  1000.000    991.330  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -147,7 +156,153 @@ Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  sla
 Interface Information 
 *********************
 
-No IO constraint found
+
+
+Input Ports: 
+
+Port          Starting            User           Arrival     Required            
+Name          Reference           Constraint     Time        Time         Slack  
+              Clock                                                              
+---------------------------------------------------------------------------------
+clk           NA                  NA             NA          NA           NA     
+value[0]      System (rising)     NA             0.000       990.259      990.259
+value[1]      System (rising)     NA             0.000       990.465      990.465
+value[2]      System (rising)     NA             0.000       990.465      990.465
+value[3]      System (rising)     NA             0.000       990.608      990.608
+value[4]      System (rising)     NA             0.000       990.608      990.608
+value[5]      System (rising)     NA             0.000       990.751      990.751
+value[6]      System (rising)     NA             0.000       990.751      990.751
+value[7]      System (rising)     NA             0.000       990.894      990.894
+value[8]      System (rising)     NA             0.000       990.894      990.894
+value[9]      System (rising)     NA             0.000       991.037      991.037
+value[10]     System (rising)     NA             0.000       991.037      991.037
+value[11]     System (rising)     NA             0.000       991.179      991.179
+value[12]     System (rising)     NA             0.000       991.179      991.179
+value[13]     System (rising)     NA             0.000       991.322      991.322
+value[14]     System (rising)     NA             0.000       991.322      991.322
+value[15]     System (rising)     NA             0.000       991.465      991.465
+value[16]     System (rising)     NA             0.000       991.465      991.465
+value[17]     System (rising)     NA             0.000       991.608      991.608
+value[18]     System (rising)     NA             0.000       991.608      991.608
+value[19]     System (rising)     NA             0.000       991.750      991.750
+value[20]     System (rising)     NA             0.000       991.750      991.750
+value[21]     System (rising)     NA             0.000       991.893      991.893
+value[22]     System (rising)     NA             0.000       991.893      991.893
+value[23]     System (rising)     NA             0.000       992.036      992.036
+value[24]     System (rising)     NA             0.000       992.036      992.036
+value[25]     System (rising)     NA             0.000       992.179      992.179
+value[26]     System (rising)     NA             0.000       992.179      992.179
+value[27]     System (rising)     NA             0.000       992.322      992.322
+value[28]     System (rising)     NA             0.000       992.322      992.322
+value[29]     System (rising)     NA             0.000       992.465      992.465
+value[30]     System (rising)     NA             0.000       992.465      992.465
+value[31]     System (rising)     NA             0.000       992.607      992.607
+value[32]     System (rising)     NA             0.000       992.607      992.607
+value[33]     System (rising)     NA             0.000       992.750      992.750
+value[34]     System (rising)     NA             0.000       992.750      992.750
+value[35]     System (rising)     NA             0.000       992.893      992.893
+value[36]     System (rising)     NA             0.000       992.893      992.893
+value[37]     System (rising)     NA             0.000       993.036      993.036
+value[38]     System (rising)     NA             0.000       993.036      993.036
+value[39]     System (rising)     NA             0.000       993.178      993.178
+value[40]     System (rising)     NA             0.000       993.178      993.178
+value[41]     System (rising)     NA             0.000       993.321      993.321
+value[42]     System (rising)     NA             0.000       993.321      993.321
+value[43]     System (rising)     NA             0.000       993.464      993.464
+value[44]     System (rising)     NA             0.000       993.464      993.464
+value[45]     System (rising)     NA             0.000       993.607      993.607
+value[46]     System (rising)     NA             0.000       993.607      993.607
+value[47]     System (rising)     NA             0.000       993.750      993.750
+value[48]     System (rising)     NA             0.000       993.750      993.750
+value[49]     System (rising)     NA             0.000       993.893      993.893
+value[50]     System (rising)     NA             0.000       993.893      993.893
+value[51]     System (rising)     NA             0.000       994.035      994.035
+value[52]     System (rising)     NA             0.000       994.035      994.035
+value[53]     System (rising)     NA             0.000       994.178      994.178
+value[54]     System (rising)     NA             0.000       994.178      994.178
+value[55]     System (rising)     NA             0.000       994.321      994.321
+value[56]     System (rising)     NA             0.000       994.321      994.321
+value[57]     System (rising)     NA             0.000       994.464      994.464
+value[58]     System (rising)     NA             0.000       994.464      994.464
+value[59]     System (rising)     NA             0.000       994.606      994.606
+value[60]     System (rising)     NA             0.000       994.606      994.606
+value[61]     System (rising)     NA             0.000       994.749      994.749
+value[62]     System (rising)     NA             0.000       994.749      994.749
+value[63]     System (rising)     NA             0.000       996.633      996.633
+=================================================================================
+
+
+Output Ports: 
+
+Port           Starting                    User           Arrival     Required            
+Name           Reference                   Constraint     Time        Time         Slack  
+               Clock                                                                      
+------------------------------------------------------------------------------------------
+result[0]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[1]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[2]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[3]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[4]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[5]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[6]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[7]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[8]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[9]      Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[10]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[11]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[12]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[13]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[14]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[15]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[16]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[17]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[18]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[19]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[20]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[21]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[22]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[23]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[24]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[25]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[26]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[27]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[28]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[29]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[30]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[31]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[32]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[33]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[34]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[35]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[36]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[37]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[38]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[39]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[40]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[41]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[42]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[43]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[44]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[45]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[46]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[47]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[48]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[49]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[50]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[51]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[52]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[53]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[54]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[55]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[56]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[57]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[58]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[59]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[60]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[61]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[62]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+result[63]     Integrator|clk (rising)     NA             3.648       1000.000     996.352
+==========================================================================================
 
 
 ##### END OF TIMING REPORT #####]
@@ -156,13 +311,19 @@ No IO constraint found
 Resource Usage Report
 Part: lcmxo2_1200ze-1
 
-Register bits: 0 of 1280 (0%)
+Register bits: 128 of 1280 (10%)
 PIC Latch:       0
-I/O cells:       0
+I/O cells:       129
 
 
 Details:
+CCU2D:          33
 GSR:            1
+IB:             65
+IFS1P3DX:       64
+OB:             64
+OFS1P3DX:       64
+ORCALUT4:       1
 PUR:            1
 VHI:            1
 VLO:            1
@@ -170,9 +331,9 @@ false:          1
 true:           1
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 39MB peak: 135MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 41MB peak: 137MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu Oct 04 20:05:05 2012
+# Tue Oct 09 18:42:20 2012
 
 ###########################################################]
