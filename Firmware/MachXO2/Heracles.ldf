@@ -24,7 +24,16 @@
         <Source name="AbsoluteEncoder.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="QuadatureEncoder.v" type="Verilog" type_short="Verilog">
+        <Source name="PIDController.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="InstantaneousSlope.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="SmartStepper.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="SmoothStepper.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="Heracles.lpf" type="Logic Preference" type_short="LPF">

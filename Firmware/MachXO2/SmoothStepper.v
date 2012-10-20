@@ -4,7 +4,9 @@ module SmoothStepper();
 	
 	// Inputs
 	
+	
 	// Outputs
+	
 	
 	// Registers
 	
