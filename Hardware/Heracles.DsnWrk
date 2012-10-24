@@ -2,3 +2,5 @@
 Version=1.0
 [Project1]
 ProjectPath=A3988 Breakout PCB.PrjPcb
+[Project2]
+ProjectPath=..\..\..\..\..\Public\Documents\Altium\AD\Library\Miscellaneous Devices\Miscellaneous Devices.LibPkg
