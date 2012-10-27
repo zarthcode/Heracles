@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [A3988 Breakout PCB.PrjPcb]
+   Generated File[A3988 Breakout.TXT]
+   Generated File[A3988 Breakout.LDP]
+   Generated File[A3988 Breakout.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 8:10:00 PM On 10/25/2012

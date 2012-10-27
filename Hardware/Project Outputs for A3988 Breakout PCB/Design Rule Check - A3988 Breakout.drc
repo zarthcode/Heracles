@@ -1,0 +1,60 @@
+Protel Design System Design Rule Check
+PCB File : D:\Workspace\Heracles\Hardware\A3988 Breakout.PcbDoc
+Date     : 10/25/2012
+Time     : 5:19:22 PM
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7.8mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=11mil) (Max=30mil) (Preferred=11.811mil) (All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Isolated copper: Split Plane  (GND)  on Ground Plane. Dead copper detected. Copper area is : 2.1E2 sq. mils
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-20 (3174.213,4294.291mil) And Fill on layer Signal Layer (3260,4260mil)
+Rule Violations :10
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (OnLayer('Multi-Layer')),(InNet('GND'))
+Rule Violations :0
+
+Processing Rule : Room A3988 Breakout (Bounding Region = (2050mil, 3050mil, 4200mil, 5200mil) (InComponentClass('A3988 Breakout'))
+Rule Violations :0
+
+
+Violations Detected : 10
+Time Elapsed        : 00:00:01
