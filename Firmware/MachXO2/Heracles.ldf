@@ -36,6 +36,27 @@
         <Source name="SmoothStepper.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="Heracles.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="I2C_Slave.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Wishbone_Master.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="efb.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="arbiter_rr.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="arbiter_rr_tb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="TrimDAC.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="Heracles.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>

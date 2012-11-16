@@ -1,4 +1,4 @@
-2504
+2694
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./../../DCMotorChannel.v" 3 DCMotorChannel
@@ -9,3 +9,7 @@
 ~A 1 "./../../StepperChannel.v" 6 StepperChannel
 ~M 3 "./../../StepperChannel_tb.v" 3 StepperChannel_tb
 ~A 1 "./../../StepperChannel_tb.v" 3 StepperChannel_tb
+~M 1 "./../../arbiter_rr.v" 2 arbiter_rr
+~A 1 "./../../arbiter_rr.v" 2 arbiter_rr
+~M 3 "./../../arbiter_rr_tb.v" 2 arbiter_rr_tb
+~A 1 "./../../arbiter_rr_tb.v" 2 arbiter_rr_tb

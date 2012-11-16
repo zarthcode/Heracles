@@ -1,4 +1,4 @@
 [Files List]
 C:\lscc\diamond\2.0\active-hdl\vlib\std/src/standard.vhd=S
-d:\Workspace\Heracles\Firmware\MachXO2\StepperChannel.v=S
-d:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v=S
+d:\Workspace\Heracles\Firmware\MachXO2\arbiter_rr.v=S
+d:\Workspace\Heracles\Firmware\MachXO2\arbiter_rr_tb.v=S

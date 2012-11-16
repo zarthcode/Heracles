@@ -1,8 +1,8 @@
-timestamp=1349455323841
+timestamp=1352604038230
 
 [$root]
-A/$root=22|""|0|1*484821
-BinI32/$root=3*415803
+A/$root=22|""|0|1*515907
+BinI32/$root=3*434294
 Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
 
 [DCMotorChannel]
@@ -33,26 +33,44 @@ P/~emb=648,1400,2468,3017
 R=./../../StepperChannel_tb.v|3
 Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
 
+[arbiter_rr]
+A/arbiter_rr=22|./../../arbiter_rr.v|2|1*507789
+BinI32/arbiter_rr=3*429551
+P/~emb=349,604,1096,1242
+R=./../../arbiter_rr.v|2
+Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[arbiter_rr_tb]
+A/arbiter_rr_tb=22|./../../arbiter_rr_tb.v|2|1*516329
+BinI32/arbiter_rr_tb=3*434433
+P/~emb=102,355,615,817
+R=./../../arbiter_rr_tb.v|2
+Version=9.1.2353.4205  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
 [~A]
 D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel.v=0*11757*12412
 D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel.v_DCMotorChannel_tb.v=0*54135*55259
 D:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel_tb.v=0*26531*27349
-LastVerilogToplevel=StepperChannel_tb
-ModifyID=2504
+LastVerilogToplevel=arbiter_rr_tb
+ModifyID=2694
 Version=73
 d:/Workspace/Heracles/Firmware/MachXO2/DCMotorChannel.v_DCMotorChannel_tb.v_StepperChannel.v_StepperChannel_tb.v=0*570655*574088
 d:/Workspace/Heracles/Firmware/MachXO2/StepperChannel.v=0*557241*558601
 d:/Workspace/Heracles/Firmware/MachXO2/StepperChannel_tb.v=0*579216*580979
+d:/Workspace/Heracles/Firmware/MachXO2/arbiter_rr.v=0*597097*598100
+d:/Workspace/Heracles/Firmware/MachXO2/arbiter_rr_tb.v=0*605229*605915
 
 [~MFT]
-0=445|0work.mgf|580979|153389
-1=422|1work.mgf|485243|478385
-3=422|3work.mgf|415942|409029
+0=487|0work.mgf|605915|159930
+1=456|1work.mgf|516329|500418
+3=456|3work.mgf|434433|420845
 
 [~U]
-$root=12|0*574665|
+$root=12|0*603810|
 DCMotorChannel=12|0*559303||0x80
 DCMotorChannel_tb=12|0*560691||0x90
 StepperChannel=12|0*562189||0x80
 StepperChannel_tb=12|0*574863||0x90
+arbiter_rr=12|0*595156||0x80
+arbiter_rr_tb=12|0*604024||0x90
 

@@ -70,6 +70,10 @@ Selected=
 /..\..\StepperChannel.v=-1
 /..\..\StepperChannel_tb.v=-1
 /stepperchannel_tb_wave.do=-1
+/..\..\arbiter_rr.v=-1
+/..\..\arbiter_rr_tb.v=-1
+/arbiter_rr_tb.do=-1
+/wave.asdb=-1
 
 [Files.Data]
 .\..\DCMotorChannel.v=Verilog Source Code
@@ -79,4 +83,8 @@ Selected=
 .\..\StepperChannel.v=Verilog Source Code
 .\..\StepperChannel_tb.v=Verilog Source Code
 .\src\stepperchannel_tb_wave.do=Macro
+.\..\arbiter_rr.v=Verilog Source Code
+.\..\arbiter_rr_tb.v=Verilog Source Code
+.\src\arbiter_rr_tb.do=Macro
+.\src\wave.asdb=Accelerated Waveform File
 

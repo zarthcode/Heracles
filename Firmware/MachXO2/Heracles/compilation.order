@@ -2,3 +2,5 @@
 .\..\DCMotorChannel_tb.v
 .\..\StepperChannel.v
 .\..\StepperChannel_tb.v
+.\..\arbiter_rr.v
+.\..\arbiter_rr_tb.v

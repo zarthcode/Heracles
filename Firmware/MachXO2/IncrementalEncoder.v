@@ -8,6 +8,7 @@ module IncrementalEncoder ( A, B, I, Position, DataBus, Reset, SetCPR, SetPositi
 	input wire Reset;			// Resets the component
 	input wire SetCPR;			// Loads value from databus into CPR register
 	input wire SetPosition;		// Loads value from databus into position register
+	input wire EnableIndex;		// Enables index pulses.
 	input wire [buswidth-1:0] DataBus;	// Used to load new values
 	
 	
@@ -20,7 +21,6 @@ module IncrementalEncoder ( A, B, I, Position, DataBus, Reset, SetCPR, SetPositi
 	reg [buswidth-1:0] CPR;		// CPR (Counts per revolution) setting
 	reg CPR_enabled;			// flag that indicates the cpr should be used.
 	reg Index_enabled; 			// flag that indicates that index should be used/enabled
-	reg IndexOnly_enabled;
 	
 	reg Direction;				// Flag used to indicate current direction.
 	parameter Dir_CW = 1;		// CW Direction constant
@@ -100,19 +100,14 @@ module IncrementalEncoder ( A, B, I, Position, DataBus, Reset, SetCPR, SetPositi
 	always @ (posedge I) begin
 		
 		// Zero (center) position.
-		if (IndexOnly_enabled) begin
+		if (Index_enabled) begin
 			
-			Position = Position + 1;	// Direction cannot be determined.
+			Position = 32'sd0;	// Set zero position.
 
-			/// \todo What should be done with an index pulse?
-			/// Speed/RPM sensor?
-			
-			
-		end
-		else if (Index_enabled) begin
-			
-			// If moving clockwise, pop position back to zero
-			// Increment separate index count.
+			// \todo Determine missed counts/positional error
+
+			// Disable index 
+			// Index_enabled = 0;
 			
 		end
 

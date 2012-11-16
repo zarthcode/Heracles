@@ -25,7 +25,7 @@ module DCMotorChannel ( dir, coast, pwm_duty, pwm_period, clk, out_I0, out_I1, o
 			if (!coast && (pwm_duty != 0) && (pwm_position <= pwm_duty)) begin
 				out_I0 <= 1'b1;
 				out_I1 <= 1'b1;
-				out_phase <= dir;				
+				out_phase <= dir;
 			end else begin
 				// Turn off outputs
 				out_I0 <= 1'b0;

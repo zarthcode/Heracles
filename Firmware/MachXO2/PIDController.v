@@ -19,7 +19,6 @@ module PIDController (ctrl_input, ctrl_setpoint, ctrl_output, clk, enable, Kp, K
 	// Outputs
 	output ctrl_output;		// PID output
 	
-	
 	// Internal registers/variables/state
 	reg enabled;
 	

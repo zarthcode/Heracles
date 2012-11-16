@@ -7,7 +7,7 @@ module StepperChannel( step, dir, microstep,
 	phase1_I0, phase1_I1, phase1_phase,
 	phase2_I0, phase2_I1, phase2_phase,
 	modified_mode,
-	morph_transition
+	morph_transition	// An additional morph transition line is needed to indicate up/down as available.
 	
 	);
 	
@@ -18,7 +18,9 @@ module StepperChannel( step, dir, microstep,
 	
 	output reg phase1_I0, phase1_I1, phase1_phase;
 	output reg phase2_I0, phase2_I1, phase2_phase;
-	output reg morph_transition; 		// Indicates that the current position is on a quarter/half or half/full-step boundary.
+	output reg [1:0] morph_transition; 		// Indicates that the current position is on a quarter/half or half/full-step boundary.
+											// LSB - full/half
+											// MSB - half/qtr
 	// Current sequence table position
 	reg [3:0] sequence_position = 2;
 	
@@ -84,9 +86,9 @@ module StepperChannel( step, dir, microstep,
 						phase2_phase = 1;
 						
 						if(microstep == 4)
-							morph_transition = 1;
+							morph_transition = 2'b10;
 						else
-							morph_transition = 0;
+							morph_transition = 2'b00;
 					end
 				1:
 					begin

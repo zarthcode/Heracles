@@ -2,21 +2,21 @@ MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
 UPDATEPROGRESS 35
-MESSAGE_SP VCP2113 "Module StepperChannel found in current working library."
+MESSAGE_SP VCP2113 "Module arbiter_rr found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
-WARNING VCP2597 "Some unconnected ports remain at instance: Test_CH. Module StepperChannel has unconnected  port(s) : morph_transition." "d:/Workspace/Heracles/Firmware/MachXO2/StepperChannel_tb.v" 78 1
 MESSAGE "Pass 3. Processing behavioral statements."
 UPDATEPROGRESS 80
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module DCMotorChannel_tb found in current working library."
+MESSAGE_SP VCP2113 "Module StepperChannel_tb found in current working library."
 UPDATEPROGRESS 86
 UPDATEPROGRESS 93
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: StepperChannel_tb."
-MESSAGE "$root top modules: DCMotorChannel_tb StepperChannel_tb."
+MESSAGE "Unit top modules: arbiter_rr_tb."
+MESSAGE "$root top modules: DCMotorChannel_tb StepperChannel_tb arbiter_rr_tb."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 MESSAGE "done"

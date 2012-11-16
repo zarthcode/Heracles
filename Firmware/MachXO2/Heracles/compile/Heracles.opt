@@ -1,1 +1,1 @@
- -u "C:\lscc\diamond\2.0\active-hdl\bin/systf.dll" -v2k5  "d:\Workspace\Heracles\Firmware\MachXO2\StepperChannel_tb.v"  -cs  -g 5  -r -li "d:\Workspace\Heracles\Firmware\MachXO2\Heracles\compile\Heracles.epr" -p "d:\Workspace\Heracles\Firmware\MachXO2\Heracles\work" 
+ -u "C:\lscc\diamond\2.0\active-hdl\bin/systf.dll" -v2k5  "d:\Workspace\Heracles\Firmware\MachXO2\arbiter_rr_tb.v"  -cs  -g 5  -r -li "d:\Workspace\Heracles\Firmware\MachXO2\Heracles\compile\Heracles.epr" -p "d:\Workspace\Heracles\Firmware\MachXO2\Heracles\work" 
