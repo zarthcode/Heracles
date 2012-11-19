@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BaliProject version="2.0" title="Heracles" device="LCMXO2-1200ZE-1TG144C" default_implementation="Heracles">
+<BaliProject version="2.0" title="Heracles" device="LCMXO2-1200ZE-1TG144C" default_implementation="PIDProcessor">
     <Options/>
     <Implementation title="Heracles" dir="Heracles" description="Heracles" default_strategy="Strategy1">
         <Options/>
@@ -61,6 +61,30 @@
             <Options/>
         </Source>
         <Source name="Heracles/Heracles.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Implementation title="PIDProcessor" dir="PIDProcessor" description="PIDProcessor" default_strategy="Quick">
+        <Options/>
+        <Source name="PIDProcessor/IncrementalEncoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="PIDProcessor/IncrementalEncoder_tb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="PIDProcessor/StepperChannel.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="PIDProcessor/StepperChannel_tb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="MotorPhase.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="PIDProcessor/Heracles_top.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Heracles.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
     </Implementation>

@@ -1,0 +1,2 @@
+@E: CG254 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":10:2:10:7|Redeclaration of ports. Cannot mix styles.
+

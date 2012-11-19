@@ -83,3 +83,4 @@ CVS
 # Folders starting with underscore. #
 #####################################
 _*
+/Firmware/MachXO2/Heracles/.build_status

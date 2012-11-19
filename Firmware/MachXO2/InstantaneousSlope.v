@@ -28,6 +28,7 @@ module InstantaneousSlope #(parameter W = 64) (value, result, clk);
 			
 			result = (value - prev_value); // / time
 			prev_value = value;
+			
 		end
 		else begin
 			

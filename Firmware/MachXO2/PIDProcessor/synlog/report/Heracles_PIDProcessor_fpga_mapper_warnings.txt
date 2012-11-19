@@ -1,0 +1,1 @@
+@W: MT246 :"c:\users\anthony\documents\repo\heracles\firmware\machxo2\pidprocessor\heracles_top.v":15:7:15:15|Blackbox OSCH is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 

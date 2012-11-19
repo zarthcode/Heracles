@@ -1,0 +1,46 @@
+Selecting top level module Heracles_top
+@N: CG364 :"C:\lscc\diamond\2.0\cae_library\synthesis\verilog\machxo2.v":1793:7:1793:10|Synthesizing module OSCH
+
+@N: CG364 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\MotorPhase.v":2:7:2:16|Synthesizing module MotorPhase
+
+	phase_address=32'b00000000000000000000000000000000
+   Generated name = MotorPhase_0s
+
+@N: CG364 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\MotorPhase.v":2:7:2:16|Synthesizing module MotorPhase
+
+	phase_address=32'b00000000000000000000000000000001
+   Generated name = MotorPhase_1s
+
+@N: CG364 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\MotorPhase.v":2:7:2:16|Synthesizing module MotorPhase
+
+	phase_address=32'b00000000000000000000000000000010
+   Generated name = MotorPhase_2s
+
+@N: CG364 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\MotorPhase.v":2:7:2:16|Synthesizing module MotorPhase
+
+	phase_address=32'b00000000000000000000000000000011
+   Generated name = MotorPhase_3s
+
+@N: CG364 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":2:7:2:18|Synthesizing module Heracles_top
+
+@W: CG360 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":9:7:9:11|No assignment to wire Reset
+
+@W: CG360 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":20:7:20:13|No assignment to wire sys_clk
+
+@W: CG360 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":24:13:24:31|No assignment to wire MotorPhase_addr_bus
+
+@W: CG360 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":25:7:25:19|No assignment to wire MotorPhase_I0
+
+@W: CG360 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":26:7:26:19|No assignment to wire MotorPhase_I1
+
+@W: CG360 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":27:7:27:22|No assignment to wire MotorPhase_Phase
+
+@W: CL168 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":57:18:57:21|Pruning instance M1_4 -- not in use ...
+
+@W: CL168 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":48:18:48:21|Pruning instance M1_3 -- not in use ...
+
+@W: CL168 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":39:18:39:21|Pruning instance M1_2 -- not in use ...
+
+@W: CL168 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":30:18:30:21|Pruning instance M1_1 -- not in use ...
+
+@W: CL156 :"C:\Users\Anthony\Documents\Repo\Heracles\Firmware\MachXO2\PIDProcessor\Heracles_top.v":15:25:15:30|*Input stdby1 to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
